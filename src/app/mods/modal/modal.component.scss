@@ -1,0 +1,17 @@
+// actions class with no children - ie, the optional
+// actions div hasn't been set
+.actions:empty {
+  display: none;
+}
+
+// The next two work together to display one div or the other.
+// Set default to none but...
+.actions-default {
+  display: none;
+}
+
+// ...if you find an empty actions, find a sibling (one that comes AFTER it
+// with .actions-default class and display it
+.actions:empty + .actions-default {
+  display: block;
+}
