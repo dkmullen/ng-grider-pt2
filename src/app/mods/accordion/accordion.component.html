@@ -1,0 +1,13 @@
+<div class="ui styled accordion">
+  <ng-container *ngFor="let item of items; let i = index">
+    <div [ngClass]="{ active: i === openedItemIndex }" class="title" (click)="onClick(i)">
+      <i class="dropdown icon"></i>
+      {{item.title}}
+    </div>
+    <div [ngClass]="{ active: i === openedItemIndex }" class="content">
+      <p>{{item.content}}</p>
+    </div>
+  </ng-container>
+</div>
+<!-- ng-container is valuable b/c it takes no space in DOM, unlike using a div
+Use the container to insert angular stuff -->
